@@ -1,0 +1,276 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin:  0px;
+    padding: 0px;
+}
+
+:root{
+    --cor1: #23272A;
+    --cor2: #323A3D;
+    --cor3: #CE9A74;
+    --cor4: #ffffff;
+    --fontPrincipal: 'Playfair Display',sans-serif;
+    --fontSecundaria: "Roboto" , sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+
+section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--cor1);
+}
+
+article{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+article > h1{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: var(--cor3);
+    font-family: var(--fontPrincipal);
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+article > p{
+    width: 80%;
+    text-align: center;
+    font-size: 13px;
+    color: var(--cor4);
+    font-family: var(--fontSecundaria);
+    margin-bottom: 10px;
+}
+
+article.topo{
+    background: url(../imagens/img-topo-mobile.jpg) ;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    margin-bottom: 2px;
+}
+
+article.topo > h1{
+    font-size: 50px;
+    color: var(--cor4);
+    font-family: var(--fontPrincipal);
+}
+
+article.topo > p{
+    font-size: 20px;
+    width: 80%;
+    color: var(--cor4);
+    text-align: center;
+    margin: 10px 0px;
+}
+
+article.topo > a{
+    width: 120px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor2);
+    font-size: 15px;
+    color: var(--cor4);
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid var(--cor3);
+    padding: 5px;
+    text-transform: uppercase;
+    font-family: var(--fontPrincipal);
+    font-weight: bolder;
+}
+
+article.topo > img{
+    width: 50px;
+    position: absolute;
+    bottom: 10px;
+    filter: invert();
+    animation: scroll 1s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes scroll {
+     0%{
+        bottom: 10px;
+     }   
+     100%{
+        bottom: 20px;
+     }
+}
+
+article.servicos{
+    background: var(--cor1);
+}
+
+article.servicos > div.card-servico{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid var(--cor4);
+    padding-bottom: 20px;
+}
+
+div.card-servico > h2{
+    width: 80%;
+    color: var(--cor3);
+    text-align: center;
+    padding: 10px ;
+    font-size: 20px;
+    font-family: var(--fontPrincipal);
+    margin-top: 20px;
+}
+
+div.card-servico > p{
+    width: 80%;
+    color: white;
+    text-align: center;
+    padding: 10px ;
+    font-size: 15px;
+    font-family: var(--fontSecundaria);
+    margin-bottom: 10px;
+}
+div.card-servico > div.card-topo{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+div.card-topo > img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+div.card-topo > div.card-topo-info{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div.card-topo-info > img{
+    width: 80px;
+    height: 80px;
+    filter: invert();
+}
+
+div.card-topo-info > h1{
+    color: var(--cor4);
+    font-size: 40px;
+    font-family: var(--fontPrincipal);
+}
+
+div.card-servico > div.card-preco{
+    border-bottom: 2px dashed var(--cor3);
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 10px 0px;
+}
+
+div.card-preco > p{
+    color: var(--cor3);
+    font-family: var(--fontPrincipal);
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+div.card-preco > p.valor{
+    color: var(--cor4);
+    font-family: var(--fontSecundaria);
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+div.card-servico > a{
+    width: 120px;
+    height: 40px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cor1);
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: var(--fontSecundaria);
+    color: white;
+    border: 3px dashed var(--cor3);
+}
+
+div.card-servico > a:hover{
+    background: var(--cor3);
+    color: var(--cor1);
+    transition: 0.3 ease-in-out;
+}
+
+
+article.sobre{
+    background: var(--cor2);
+    padding: 30px 0px;
+}
+
+
+article.sobre > div.card-sobre{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+div.card-sobre > img{
+    width: 50px;
+    height: 50px;
+    filter: invert();
+    margin: 10px 0px;
+}
+
+div.card-sobre > h2{
+    font-size: 20px;
+    color: var(--cor3);
+    font-family: var(--fontPrincipal);
+    font-weight: bolder;
+}
+
+div.card-sobre > p{
+    width: 80%;
+    font-size: 15px;
+    text-align: center;
+    color: var(--cor4);
+    font-family: var(--fontSecundaria);
+    font-weight: normal;
+}
