@@ -33,11 +33,13 @@ section{
 }
 
 article{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     position: relative;
+    padding: 20px 0px;
 }
 
 article > h1{
@@ -119,6 +121,7 @@ article.topo > img{
 
 article.servicos{
     background: var(--cor1);
+    padding: 10px 0px;
 }
 
 article.servicos > div.card-servico{
@@ -239,7 +242,7 @@ div.card-servico > a:hover{
 
 article.sobre{
     background: var(--cor2);
-    padding: 30px 0px;
+    padding: 10px 0px;
 }
 
 
@@ -273,4 +276,64 @@ div.card-sobre > p{
     color: var(--cor4);
     font-family: var(--fontSecundaria);
     font-weight: normal;
+}
+
+article.avaliacaoes{
+    background: url(../imagens/avaliacao-foto.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+article.avaliacaoes > div.card-avaliacoes{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div.card-avaliacoes > img{
+    width: 30px;
+    height: 30px;
+}
+div.card-avaliacoes > p{
+    color: var(--cor4);
+    width: 80%;
+    text-align: center;
+    font-family: var(--fontSecundaria);
+    font-weight: bolder;
+    padding: 10px 0px;
+}
+
+div.card-avaliacoes > p.name{
+    color: var(--cor4);
+    width: 80%;
+    text-align: center;
+    font-family: var(--fontSecundaria);
+    font-weight: bolder;
+    padding: 10px 0px;
+    font-size: 30px;
+}
+
+article.gallery > div.fotos-gallery{
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+div.fotos-gallery > img{
+    width: 150px;
+    height: 150px;
 }
