@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style/swiper-bundle.min.css">
 </head>
+
 <body>
     <header>
+        <nav class="nav-mobile">
+            <div class="menu" onclick="openNav()">
+                <img src="imagens/cardapio-menu.png" alt="">
+            </div>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#servicos" onclick="closeNav()">Serviços</a>
+                <a href="#contato" onclick="closeNav()">Contato</a>
+                <a href="#clientes" onclick="closeNav()">Clientes</a>
+                <a href="#fotos" onclick="closeNav()">Fotos</a>
+            </div>
+        </nav>
+        <nav class="nav-pc">
 
+        </nav>
     </header>
     <section>
         <article class="topo">
-            <h1>Headline</h1>   
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui temporibus in saepe non ea sapiente voluptatum.</p>
-            <a href="#">Ver serviços</a>
+            <h1>Barbearia Razor</h1>
+            <p>Transformando seu estilo, um corte por vez. Experimente o melhor da tradição e modernidade em cada
+                detalhe. Agende seu horário e descubra uma nova maneira de se cuidar.</p>
+            <a href="#servicos">Ver serviços</a>
             <img src="imagens/seta-para-baixo.png" alt="seta-para-baixo">
         </article>
+        <a name="servicos"></a>
         <article class="servicos">
             <div class="card-servico">
                 <div class="card-topo">
@@ -26,21 +46,22 @@
                         <h1>Cortes</h1>
                     </div>
                 </div>
-                <h2>Cortes apartir de R$35,00</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <h2>Cortes apartir de R$15,00</h2>
+                <p>Tenha o corte perfeito que combina com seu estilo e personalidade com nossos barbeiros qualificados.
+                </p>
                 <div class="card-preco">
                     <p>Corte Simples</p>
                     <p class="valor">R$15</p>
                 </div>
                 <div class="card-preco">
-                    <p>Corte Simples</p>
-                    <p class="valor">R$15</p>
+                    <p>Corte Regular</p>
+                    <p class="valor">R$25</p>
                 </div>
                 <div class="card-preco">
-                    <p>Corte Simples</p>
-                    <p class="valor">R$15</p>
+                    <p>Corte Deluxe</p>
+                    <p class="valor">R$40</p>
                 </div>
-                <a href="#">Agendar</a>
+                <a href="#contato">Agendar</a>
             </div>
             <div class="card-servico">
                 <div class="card-topo">
@@ -50,78 +71,142 @@
                         <h1>Barba</h1>
                     </div>
                 </div>
-                <h2>Barba apartir de R$40,00</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <h2>Barba apartir de R$20,00</h2>
+                <p>Experimente um barbear de luxo com produtos premium para uma pele suave e revigorada.</p>
                 <div class="card-preco">
-                    <p>Corte Simples</p>
-                    <p class="valor">R$15</p>
+                    <p>Barba Simples</p>
+                    <p class="valor">R$20</p>
                 </div>
                 <div class="card-preco">
-                    <p>Corte Simples</p>
-                    <p class="valor">R$15</p>
+                    <p>Barba Regular</p>
+                    <p class="valor">R$35</p>
                 </div>
                 <div class="card-preco">
-                    <p>Corte Simples</p>
-                    <p class="valor">R$15</p>
+                    <p>Barba Deluxe</p>
+                    <p class="valor">R$65</p>
                 </div>
-                <a href="#">Agendar</a>
+                <a href="contato">Agendar</a>
             </div>
         </article>
         <article class="sobre">
-            <h1>HEADLINE</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <h1>Sobre nós</h1>
             <div class="card-sobre">
                 <img src="imagens/gostar.png" alt="icon-info-sobre">
-                <h2>HEADLINE</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloremque eum impedit rerum corrupti placeat tempora commodi nisi perspiciatis.</p>
+                <h2>Pessoal Qualificado</h2>
+                <p>Nossos barbeiros são altamente treinados e experientes, garantindo que você receba o melhor serviço.
+                </p>
             </div>
             <div class="card-sobre">
                 <img src="imagens/distintivo.png" alt="icon-info-sobre">
-                <h2>HEADLINE</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloremque eum impedit rerum corrupti placeat tempora commodi nisi perspiciatis.</p>
+                <h2>Produtos Premium</h2>
+                <p>Utilizamos apenas os melhores produtos para garantir que você saia com uma ótima aparência e se sinta
+                    incrível.</p>
             </div>
             <div class="card-sobre">
                 <img src="imagens/pin.png" alt="icon-info-sobre">
-                <h2>HEADLINE</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloremque eum impedit rerum corrupti placeat tempora commodi nisi perspiciatis.</p>
+                <h2>Localização Agradável</h2>
+                <p>Localizada no coração de São Paulo, nossa loja oferece um ambiente relaxante e acolhedor.</p>
             </div>
         </article>
-        <article class="avaliacaoes"> 
-            <div class="card-avaliacoes">
-                <img src="#" alt="icone-avaliação">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus saepe cumque neque deleniti rem tenetur quaerat impedit ipsum reprehenderit ducimus totam repudiandae, magnam eveniet, placeat maxime vitae fuga? Eos, et!</p>
-                <p class="name">
-                    NAME
-                </p>
+        <a name="clientes"></a>
+        <article class="avaliacaoes mySwiper">
+            <div class="container-cards swiper-wrapper">
+                <div class="cardAvaliacao swiper-slide">
+                    <img src="imagens/avaliacao-icon.png" alt="icone-avaliação">
+                    <p>Atendimento impecável e ambiente super agradável. A equipe da Barbearia Estilo Nobre realmente entende de estilo e sabe como deixar a gente à vontade. Saí de lá me sentindo renovado! Recomendo a todos!</p>
+                    <p class="name">
+                        João Carvalho
+                    </p>
+                </div>
+                <div class="cardAvaliacao swiper-slide">
+                    <img src="imagens/avaliacao-icon.png" alt="icone-avaliação">
+                    <p>Nunca pensei que um corte de cabelo pudesse fazer tanta diferença. Os profissionais são super atenciosos e detalhistas. A Barbearia Estilo Nobre se tornou meu lugar de confiança para dar aquele trato no visual.</p>
+                    <p class="name">
+                        Marcos Silva
+                    </p>
+                </div>
+                <div class="cardAvaliacao swiper-slide">
+                    <img src="imagens/avaliacao-icon.png" alt="icone-avaliação">
+                    <p>Experiência incrível! Desde o atendimento até o corte final, tudo perfeito. O ambiente é muito acolhedor e a qualidade dos serviços é excelente. Vale cada minuto e cada centavo. Parabéns à equipe!</p>
+                    <p class="name">
+                        Felipe Santos
+                    </p>
+                </div>
             </div>
-            <div class="card-avaliacoes" style="display: none;">
-                <img src="#" alt="icone-avaliação">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus saepe cumque neque deleniti rem tenetur quaerat impedit ipsum reprehenderit ducimus totam repudiandae, magnam eveniet, placeat maxime vitae fuga? Eos, et!</p>
-                <p class="name">
-                    NAME
-                </p>
-            </div>
-            <div class="card-avaliacoes" style="display: none;">
-                <img src="#" alt="icone-avaliação">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus saepe cumque neque deleniti rem tenetur quaerat impedit ipsum reprehenderit ducimus totam repudiandae, magnam eveniet, placeat maxime vitae fuga? Eos, et!</p>
-                <p class="name">
-                    NAME
-                </p>
-            </div>
+
+            <script src="script/swiper-bundle.min.js"></script>
+            <script src="script/funcoes.js"></script>
+
         </article>
+        <a name="fotos"></a>
         <article class="gallery">
             <h1>Nossas fotos</h1>
             <div class="fotos-gallery">
-                <img src="#" alt="">
-                <img src="#" alt="">
-                <img src="#" alt="">
-                <img src="#" alt="">
-                <img src="#" alt="">
+                <img src="imagens/galeria/galeria1.jpg" alt="">
+                <img src="imagens/galeria/galeria2.jpg" alt="">
+                <img src="imagens/galeria/galeria3.jpg" alt="">
+                <img src="imagens/galeria/galeria4.jpg" alt="">
+                <img src="imagens/galeria/galeria5.jpg" alt="">
+                <img src="imagens/galeria/galeria6.jpg" alt="">
             </div>
+        </article>
+        <a name="contato"></a>
+        <article class="form">
+            <h1>Marque um agendamento</h1>
+            <form action="index.html" class="form">
+                <div class="formColumn">
+                    <div class="input-field">
+                        <input type="text" required spellcheck="false">
+                        <label>Nome</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" required spellcheck="false">
+                        <label>Email</label>
+                    </div>
+                </div>
+                <div class="formColumn">
+                    <div class="input-field">
+                        <input type="text" required spellcheck="false">
+                        <label>Telefone</label>
+                    </div>
+                    <select name="slTrat" id="slTrat" v>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="" id="op1">Barba</option>
+                        <option value="" id="op2">Corte</option>
+                    </select>
+                </div>
+                <button class="btnEnviar"><span>Enviar</span></button>
+            </form>
         </article>
     </section>
     <footer>
-
+        <div class="footer-info">
+            <img src="imagens/footer-icon-1.png" alt="icon">
+            <h1>Horário</h1>
+            <p>Das 9:00 as 17:00 de segunda a sexta</p>
+        </div>
+        <div class="footer-info">
+            <img src="imagens/footer-icon-2.png" alt="icon">
+            <h1>Horário</h1>
+            <p>Entre em contato pelas nossas redes</p>
+            <div class="footer-redes">
+                <a href="#">
+                    <img src="imagens/instagramI-icon.png" alt="redes-icon">
+                </a>
+                <a href="#">
+                    <img src="imagens/twitter-icon.png" alt="redes-icon">
+                </a>
+                <a href="#">
+                    <img src="imagens/facebook-icon.png" alt="redes-icon">
+                </a>
+            </div>
+        </div>
+        <div class="footer-info">
+            <img src="imagens/footer-icon-3.png" alt="icon">
+            <h1>Rua: Exemplosite N° 50</h1>
+            <p>+55 (99)9999-9999</p>
+        </div>
     </footer>
 </body>
+
 </html>
